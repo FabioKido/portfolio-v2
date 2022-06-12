@@ -48,7 +48,7 @@ nav {
   z-index: 10;
 }
 
-.hide {
+.hide-menu {
   opacity: 0;
   transition-duration: .4s;
 }
@@ -496,6 +496,10 @@ footer>p>a:hover {
 
   color: white;
   font-size: 50px;
+}
+
+.hide-go-home {
+  display: none;
 }
 
 /* Responsive */

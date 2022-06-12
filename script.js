@@ -4,15 +4,15 @@ let gohomebox = document.querySelector('#go-home');
 window.addEventListener("scroll", (event) => {
   let scroll = this.scrollY;
   if (scroll > 0) {
-    menubar.classList.add('hide');
-    gohomebox.classList.remove('hide');
+    menubar.classList.add('hide-menu');
+    gohomebox.classList.remove('hide-go-home');
   } else {
-    menubar.classList.remove('hide');
-    gohomebox.classList.add('hide');
+    menubar.classList.remove('hide-menu');
+    gohomebox.classList.add('hide-go-home');
   }
 });
 
-menubar.onmouseover = () => menubar.classList.remove('hide');
+menubar.onmouseover = () => menubar.classList.remove('hide-menu');
 
 
 const sr = ScrollReveal({
