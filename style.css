@@ -58,10 +58,6 @@ nav {
   font-size: 29px;
 }
 
-span {
-  color: var(--color-principal);
-}
-
 nav ul li {
   list-style: none;
   display: inline-block;
@@ -83,6 +79,31 @@ section {
   min-height: 100vh;
 }
 
+h1 {
+  color: white;
+  font-size: 80px;
+  font-family: var(--font-h1);
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+
+p {
+  color: white;
+
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.7;
+}
+
+span {
+  color: var(--color-principal);
+}
+
+abbr {
+  text-decoration: none;
+}
+
+/* Section Hero */
 .hero {
   display: flex;
   flex-direction: column;
@@ -99,6 +120,28 @@ section {
   margin-bottom: 25px;
 }
 
+.contact {
+  background: var(--color-principal);
+  padding: 12px 30px;
+  border: 2px solid transparent;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: .3s;
+
+  text-decoration: none;
+}
+
+.contact:hover {
+  background: transparent;
+  border: 2px solid var(--color-principal);
+  color: white;
+  transform: translateY(-10px);
+  cursor: pointer;
+}
+
+/* Section About */
 .about-me {
   display: flex;
 
@@ -153,6 +196,7 @@ section {
   letter-spacing: 6px;
 }
 
+/* Section Skills */
 .skills {
   padding: 50px 0;
 }
@@ -193,12 +237,15 @@ section {
   color: white;
 }
 
-.row p {
+.row ul li {
   font-size: 1rem;
   color: var(--color-secondary);
   line-height: 30px;
+
+  list-style: none;
 }
 
+/* Section Experience */
 .experience {
   padding: 50px 0;
 }
@@ -251,10 +298,11 @@ section {
 }
 
 .box:hover {
-  transform: translateX(15px);
+  transform: translateY(-15px);
   box-shadow: 0px 15px 30px 0px rgba(255, 255, 255, 0.151);
 }
 
+/* Section Projects */
 .projects {
   display: flex;
   justify-content: center;
@@ -372,48 +420,7 @@ section {
   background-color: var(--color-principal);
 }
 
-abbr {
-  text-decoration: none;
-}
-
-h1 {
-  color: white;
-  font-size: 80px;
-  font-family: var(--font-h1);
-  font-weight: 900;
-  margin-bottom: 10px;
-}
-
-p {
-  color: white;
-
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 1.7;
-}
-
-.contact {
-  background: var(--color-principal);
-  padding: 12px 30px;
-  border: 2px solid transparent;
-  border-radius: 30px;
-  color: white;
-  font-size: 16px;
-  font-weight: bold;
-  letter-spacing: 1px;
-  transition: .3s;
-
-  text-decoration: none;
-}
-
-.contact:hover {
-  background: transparent;
-  border: 2px solid var(--color-principal);
-  color: white;
-  transform: translateY(-10px);
-  cursor: pointer;
-}
-
+/* Social links */
 .links {
   position: absolute;
   top: 90%;
@@ -441,6 +448,7 @@ p {
   transform: translateY(10px);
 }
 
+/* Footer */
 footer {
   background-color: var(--cor5);
   color: white;
@@ -464,6 +472,7 @@ footer>p>a:hover {
   color: var(--cor1);
 }
 
+/* Scrollbar styles */
 ::-webkit-scrollbar {
   width: 5px;
 }
@@ -472,6 +481,7 @@ footer>p>a:hover {
   background: var(--color-principal);
 }
 
+/* Go home link */
 #go-home {
   position: fixed;
   bottom: 0;
@@ -482,6 +492,7 @@ footer>p>a:hover {
   margin: 10px;
 
   background-color: var(--color-principal);
+  cursor: pointer;
 }
 
 #go-home a {
@@ -496,6 +507,11 @@ footer>p>a:hover {
 
   color: white;
   font-size: 50px;
+}
+
+#go-home:hover {
+  background-color: transparent;
+  outline: 2px solid var(--color-principal);
 }
 
 .hide-go-home {
