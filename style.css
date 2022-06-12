@@ -44,6 +44,8 @@ nav {
   padding-left: 10%;
   padding-right: 10%;
 
+  transition-duration: .5s;
+
   background-color: black;
   z-index: 10;
 }
@@ -519,3 +521,20 @@ footer>p>a:hover {
 }
 
 /* Responsive */
+@media (max-width: 810px) {
+  nav ul {
+    display: none;
+  }
+}
+
+@media (max-width: 1010px) {
+  nav {
+    padding: 10px 2.5%;
+
+    transition-duration: .5s;
+  }
+
+  nav ul li {
+    padding: 5px 11px;
+  }
+}
