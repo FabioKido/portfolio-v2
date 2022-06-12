@@ -48,7 +48,7 @@ nav {
   z-index: 10;
 }
 
-.nav-scrolled {
+.hide {
   opacity: 0;
   transition-duration: .4s;
 }
@@ -470,6 +470,32 @@ footer>p>a:hover {
 
 ::-webkit-scrollbar-thumb {
   background: var(--color-principal);
+}
+
+#go-home {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+
+  width: 40px;
+  height: 40px;
+  margin: 10px;
+
+  background-color: var(--color-principal);
+}
+
+#go-home a {
+  position: relative;
+  text-decoration: none;
+}
+
+#go-home a span {
+  position: absolute;
+  top: 10px;
+  left: 8px;
+
+  color: white;
+  font-size: 50px;
 }
 
 /* Responsive */

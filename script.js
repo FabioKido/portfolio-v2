@@ -1,17 +1,18 @@
 let menubar = document.querySelector('nav');
-
-const removeClassOfNav = () => menubar.classList.remove('nav-scrolled');
+let gohomebox = document.querySelector('#go-home');
 
 window.addEventListener("scroll", (event) => {
   let scroll = this.scrollY;
   if (scroll > 0) {
-    menubar.classList.add('nav-scrolled');
+    menubar.classList.add('hide');
+    gohomebox.classList.remove('hide');
   } else {
-    removeClassOfNav();
+    menubar.classList.remove('hide');
+    gohomebox.classList.add('hide');
   }
 });
 
-menubar.onmouseover = removeClassOfNav;
+menubar.onmouseover = () => menubar.classList.remove('hide');
 
 
 const sr = ScrollReveal({
