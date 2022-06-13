@@ -33,17 +33,23 @@ sr.reveal('.about-me, .skills, .experience', { delay: 100, origin: 'top' });
 // Slide - Carrousel
 document.getElementById("radio1").checked = true;
 
-let count = 1;
+let count = 1,
+  btns = document.querySelectorAll(".manual-navigation label");
 
 setInterval(function () {
   nextImage();
 }, 5000);
 
 function nextImage() {
+  btns[count - 1].classList.remove("auto");
+
   count++;
+
   if (count > 4) {
     count = 1;
   }
 
   document.getElementById("radio" + count).checked = true;
+
+  btns[count - 1].classList.add("auto");
 }
