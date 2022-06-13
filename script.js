@@ -1,10 +1,13 @@
+// Menu
 let menubar = document.querySelector('nav');
+const toggle = document.querySelector('.toggle');
 let gohomebox = document.querySelector('#go-home');
 
 window.addEventListener("scroll", (event) => {
   let scroll = this.scrollY;
   if (scroll > 0) {
     menubar.classList.add('hide-menu');
+    menubar.classList.remove('active');
     gohomebox.classList.remove('hide-go-home');
   } else {
     menubar.classList.remove('hide-menu');
@@ -14,7 +17,11 @@ window.addEventListener("scroll", (event) => {
 
 menubar.onmouseover = () => menubar.classList.remove('hide-menu');
 
+toggle.onclick = function () {
+  menubar.classList.toggle('active');
+}
 
+// Scroll Reveal
 const sr = ScrollReveal({
   distance: '40px',
   duration: 2500,
@@ -23,8 +30,10 @@ const sr = ScrollReveal({
 
 sr.reveal('.about-me, .skills, .experience', { delay: 100, origin: 'top' });
 
-let count = 1;
+// Slide - Carrousel
 document.getElementById("radio1").checked = true;
+
+let count = 1;
 
 setInterval(function () {
   nextImage();
