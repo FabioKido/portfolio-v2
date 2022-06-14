@@ -347,6 +347,28 @@ abbr {
   height: 100%;
 }
 
+.slide .project-site {
+  display: none;
+  background-color: var(--color-principal);
+  position: absolute;
+  width: 130px;
+  top: 75%;
+  right: 0;
+  text-decoration: none;
+  color: white;
+  padding: 12px;
+  text-align: center;
+  font-size: 1em;
+  max-width: 400px;
+  font-weight: bold;
+  margin: 0 15px;
+  transition-duration: 1s;
+}
+
+.slide:hover .project-site {
+  display: block;
+}
+
 .manual-navigation {
   position: absolute;
   width: 800px;
@@ -608,7 +630,6 @@ footer>p>a:hover {
 
   nav ul li {
     font-size: 22px;
-    margin: 10px 100px;
   }
 
   nav .toggle {
@@ -663,6 +684,10 @@ footer>p>a:hover {
 
   .slides {
     max-width: 400%;
+  }
+
+  .slide .project-site {
+    top: 78%;
   }
 
   .manual-navigation {
