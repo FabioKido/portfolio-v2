@@ -3,7 +3,7 @@ let menubar = document.querySelector('nav');
 const toggle = document.querySelector('.toggle');
 let gohomebox = document.querySelector('#go-home');
 
-window.addEventListener("scroll", (event) => {
+const handleScroll = (event) => {
   let scroll = this.scrollY;
   if (scroll > 0) {
     menubar.classList.add('hide-menu');
@@ -13,12 +13,24 @@ window.addEventListener("scroll", (event) => {
     menubar.classList.remove('hide-menu');
     gohomebox.classList.add('hide-go-home');
   }
-});
+}
+
+window.addEventListener("scroll", handleScroll);
 
 menubar.onmouseover = () => menubar.classList.remove('hide-menu');
 
-toggle.onclick = function () {
+toggle.onclick = function (event) {
   menubar.classList.toggle('active');
+
+  const active = menubar.classList.contains('active');
+
+  event.currentTarget.setAttribute('aria-expanded', active)
+
+  if (active) {
+    event.currentTarget.setAttribute('aria-label', 'Fechar Menu')
+  } else {
+    event.currentTarget.setAttribute('aria-label', 'Abrir Menu')
+  }
 }
 
 // Scroll Reveal
