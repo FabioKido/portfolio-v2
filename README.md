@@ -28,5 +28,3 @@ O site é composto por cinco seções:
 - ScrollReveal;
 
 ---
-
-<h2>Fábio Henrique - Kido</h2>
