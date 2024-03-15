@@ -4,7 +4,7 @@
 
 <!-- ![Home section](imgs) -->
 
-<h4 align="center"><a href="#">Visitar o Projeto</a></h4>
+<h4 align="center"><a href="https://fabiokido.github.io/portfolio-v2/">Visitar o Projeto</a></h4>
 
 ## Seções
 
